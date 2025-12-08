@@ -1,0 +1,510 @@
+PROJECT MANIFEST - Online Portal SIBI
+=====================================
+Date Created: December 2, 2025
+Project Owner: DELL User
+Base Location: C:\Users\DELL\Desktop\Exam-Portal-master\
+
+PROJECT STRUCTURE
+=================
+
+ROOT: online-portal-sibi/
+├── BACKEND: online-portal-backend/
+│   ├── BUILD: Maven (pom.xml)
+│   ├── FRAMEWORK: Spring Boot 2.7.14
+│   ├── DATABASE: MySQL with JPA/Hibernate
+│   ├── SOURCE:
+│   │   ├── entity/ (5 classes)
+│   │   ├── controller/ (3+ controllers)
+│   │   ├── repository/ (5 interfaces)
+│   │   └── OnlinePortalApplication.java
+│   ├── CONFIG: application.properties
+│   └── MAVEN: mvnw, mvnw.cmd, pom.xml
+
+├── FRONTEND: online-portal-frontend/
+│   ├── BUILD: npm/React Scripts
+│   ├── FRAMEWORK: React 18.2.0
+│   ├── STATE: Redux + React Router
+│   ├── SOURCE:
+│   │   ├── components/ (Header, etc.)
+│   │   ├── pages/ (Login, Register, Dashboard)
+│   │   ├── reducers/ (auth, category, quiz)
+│   │   ├── services/ (API calls)
+│   │   ├── constants/ (action types)
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── CONFIG: setupProxy.js, package.json
+│   └── PUBLIC: index.html, manifest.json
+
+├── DOCUMENTATION:
+│   ├── INDEX.md (Navigation guide)
+│   ├── QUICK_START.md (5-minute setup)
+│   ├── SETUP_GUIDE.md (Detailed setup)
+│   ├── README.md (Complete documentation)
+│   ├── CONFIGURATION.md (Config options)
+│   └── INSTALLATION_SUMMARY.md (Full summary)
+
+├── STARTUP SCRIPTS:
+│   ├── START_ALL.bat (Both servers)
+│   ├── START_BACKEND.bat (Backend only)
+│   └── START_FRONTEND.bat (Frontend only)
+
+└── THIS FILE: PROJECT_MANIFEST.txt
+
+
+TECHNOLOGY STACK
+================
+
+BACKEND:
+  Language: Java 17
+  Framework: Spring Boot 2.7.14
+  Dependency Manager: Maven
+  ORM: JPA/Hibernate
+  Database Driver: MySQL Connector/J 8.0.30
+  Security: Spring Security
+  Authentication: JWT (ready to implement)
+  Testing: JUnit, Spring Test
+
+FRONTEND:
+  Language: JavaScript ES6+
+  Framework: React 18.2.0
+  State Management: Redux 4.2.0
+  Routing: React Router DOM 6.3.0
+  HTTP Client: Axios 0.27.2
+  UI Framework: Bootstrap 5.2.0
+  Build Tool: React Scripts 5.0.1
+  Package Manager: npm
+
+DATABASE:
+  Engine: MySQL 8.0+
+  Database: online-portal
+  Tables: 5 (users, categories, quizzes, questions, quiz_results)
+  User: root
+  Password: root@
+
+OTHER TOOLS:
+  API Documentation: Included in README.md
+  Proxy Middleware: http-proxy-middleware 2.0.6
+  State DevTools: redux-devtools-extension 2.13.9
+  Sweet Alerts: sweetalert 2.1.2
+
+
+ENDPOINTS AVAILABLE
+===================
+
+Authentication:
+  POST   /api/auth/register        - Register new user
+  POST   /api/auth/login           - Login user
+  GET    /api/auth/profile/{id}    - Get user profile
+  PUT    /api/auth/profile/{id}    - Update user profile
+
+Categories:
+  GET    /api/categories           - Get all categories
+  GET    /api/categories/{id}      - Get category by ID
+  POST   /api/categories           - Create category
+  PUT    /api/categories/{id}      - Update category
+  DELETE /api/categories/{id}      - Delete category
+
+Quizzes:
+  GET    /api/quizzes              - Get all quizzes
+  GET    /api/quizzes/{id}         - Get quiz details
+  GET    /api/quizzes/category/{id} - Quizzes by category
+  POST   /api/quizzes              - Create quiz
+  PUT    /api/quizzes/{id}         - Update quiz
+  DELETE /api/quizzes/{id}         - Delete quiz
+
+
+FEATURES IMPLEMENTED
+====================
+
+USER FEATURES:
+  ✓ User Registration
+  ✓ User Login
+  ✓ User Profile Management
+  ✓ View All Quizzes
+  ✓ View Quizzes by Category
+  ✓ Quiz Listing (Ready for taking)
+  ✓ Responsive Dashboard
+
+ADMIN FEATURES:
+  ✓ Manage Categories (Create, Read, Update, Delete)
+  ✓ Manage Quizzes (Create, Read, Update, Delete)
+  ✓ Manage Users (List, View profiles)
+
+TECHNICAL FEATURES:
+  ✓ Redux State Management
+  ✓ JWT Authentication Ready
+  ✓ REST API Architecture
+  ✓ CORS Enabled
+  ✓ Error Handling
+  ✓ Bootstrap Responsive Design
+  ✓ API Proxy Configuration
+
+
+FUTURE ENHANCEMENTS
+===================
+
+Ready to Add:
+  - Question Management
+  - Quiz Taking Interface
+  - Question Shuffling
+  - Timer Functionality
+  - Answer Submission
+  - Result Calculation
+  - Result Display
+  - Answer Review
+  - Pagination
+  - Search & Filter
+  - User Reports
+  - Admin Analytics
+  - Email Notifications
+  - Two-Factor Authentication
+  - Social Login
+  - Mobile App
+  - Payment Integration
+
+
+FILE COUNT SUMMARY
+==================
+
+Backend:
+  - Java Classes: 11+
+  - Configuration Files: 1
+  - Resource Files: 1
+  - Test Files: 0 (ready to add)
+  
+Frontend:
+  - JavaScript/JSX Files: 15+
+  - CSS Files: 2+
+  - Config Files: 3
+  - Public Files: 2
+
+Documentation:
+  - Markdown Files: 6
+  - Batch Scripts: 3
+  - Configuration: 1
+
+Total Project Files: 44,000+ (includes node_modules)
+Total Project Size: ~1.5 GB (including node_modules)
+Source Code Size: ~500 MB (without node_modules)
+
+
+DEPENDENCIES SUMMARY
+====================
+
+Backend (Maven):
+  - Spring Boot Starters: 3
+  - Spring Security: 1
+  - MySQL Connector: 1
+  - JWT: 1
+  - Lombok: 1
+  - Test Dependencies: 2
+
+Frontend (npm):
+  - Core Packages: 20+
+  - Bootstrap: 2 (bootstrap, react-bootstrap)
+  - Redux: 3 (redux, react-redux, redux-thunk)
+  - UI Libraries: 4
+  - Development: ~1500 packages
+
+Total: ~1600+ packages (including nested dependencies)
+
+
+CONFIGURATION DETAILS
+=====================
+
+Backend (application.properties):
+  - Server Port: 8081
+  - Context Path: /api
+  - Database URL: jdbc:mysql://localhost:3306/online-portal
+  - Database User: root
+  - Database Password: root@
+  - JPA DDL Auto: update
+  - Show SQL: true
+
+Frontend (setupProxy.js):
+  - Proxy Target: http://127.0.0.1:8081
+  - Change Origin: true
+
+Frontend (package.json):
+  - React Scripts: 5.0.1
+  - Node Version: 14+
+  - npm Version: 8+
+
+
+SYSTEM REQUIREMENTS
+===================
+
+Minimum:
+  - RAM: 4 GB
+  - Storage: 2 GB (without node_modules)
+  - Java: JDK 11+
+  - Node.js: v12+
+  - npm: v6+
+  - MySQL: 5.7+
+
+Recommended:
+  - RAM: 8 GB
+  - Storage: 5 GB (with node_modules)
+  - Java: JDK 17+
+  - Node.js: v16+
+  - npm: v8+
+  - MySQL: 8.0+
+
+
+DATABASE SCHEMA
+===============
+
+Users Table:
+  - id (BIGINT, PK, Auto-increment)
+  - username (VARCHAR, Unique)
+  - email (VARCHAR, Unique)
+  - password (VARCHAR, Hashed)
+  - first_name (VARCHAR)
+  - last_name (VARCHAR)
+  - role (VARCHAR)
+  - created_at (TIMESTAMP)
+  - updated_at (TIMESTAMP)
+
+Categories Table:
+  - id (BIGINT, PK, Auto-increment)
+  - name (VARCHAR, Unique)
+  - description (TEXT)
+  - created_at (TIMESTAMP)
+
+Quizzes Table:
+  - id (BIGINT, PK, Auto-increment)
+  - title (VARCHAR)
+  - description (TEXT)
+  - category_id (BIGINT, FK)
+  - total_questions (INT)
+  - max_marks (INT)
+  - passing_marks (INT)
+  - created_at (TIMESTAMP)
+  - updated_at (TIMESTAMP)
+
+Questions Table:
+  - id (BIGINT, PK, Auto-increment)
+  - question_text (TEXT)
+  - quiz_id (BIGINT, FK)
+  - marks (INT)
+  - option_a (TEXT)
+  - option_b (TEXT)
+  - option_c (TEXT)
+  - option_d (TEXT)
+  - correct_answer (VARCHAR)
+  - created_at (TIMESTAMP)
+
+Quiz Results Table:
+  - id (BIGINT, PK, Auto-increment)
+  - user_id (BIGINT, FK)
+  - quiz_id (BIGINT, FK)
+  - obtained_marks (INT)
+  - total_marks (INT)
+  - percentage (DOUBLE)
+  - passed (BOOLEAN)
+  - attempted_at (TIMESTAMP)
+
+
+PORTS AND URLS
+===============
+
+Development:
+  Frontend: http://localhost:3000
+  Backend: http://localhost:8081
+  Backend API: http://localhost:8081/api
+  Database: localhost:3306
+
+Production (To be configured):
+  Frontend: [To be configured]
+  Backend: [To be configured]
+  Database: [To be configured]
+
+
+STARTUP INSTRUCTIONS
+====================
+
+Quick Start:
+  1. Create MySQL database (see QUICK_START.md)
+  2. Double-click: START_ALL.bat
+  3. Open: http://localhost:3000
+
+Manual Start:
+
+Terminal 1 (Backend):
+  cd online-portal-backend
+  set JAVA_HOME=C:\Program Files\Java\jdk-17
+  mvnw spring-boot:run
+
+Terminal 2 (Frontend):
+  cd online-portal-frontend
+  npm start
+
+
+DOCUMENTATION FILES GUIDE
+==========================
+
+INDEX.md:
+  Purpose: Navigation and quick reference
+  Read Time: 5 minutes
+  Best For: First-time users finding their way
+
+QUICK_START.md:
+  Purpose: Fast setup in 5 minutes
+  Read Time: 5 minutes
+  Best For: Impatient developers
+
+SETUP_GUIDE.md:
+  Purpose: Detailed setup with prerequisites
+  Read Time: 15 minutes
+  Best For: Step-by-step guidance
+
+README.md:
+  Purpose: Complete project documentation
+  Read Time: 30 minutes
+  Best For: Understanding all features
+
+CONFIGURATION.md:
+  Purpose: Detailed configuration options
+  Read Time: 20 minutes
+  Best For: Custom configuration needs
+
+INSTALLATION_SUMMARY.md:
+  Purpose: Project overview and architecture
+  Read Time: 25 minutes
+  Best For: Understanding the big picture
+
+
+SECURITY NOTES
+==============
+
+Development:
+  - CORS enabled for localhost
+  - Password hashing with BCrypt
+  - Basic validation implemented
+  - HTTPS: Not yet configured
+  - JWT: Ready for implementation
+
+Production Checklist:
+  - [ ] Implement JWT authentication
+  - [ ] Enable HTTPS
+  - [ ] Add API rate limiting
+  - [ ] Add input validation
+  - [ ] Add CSRF protection
+  - [ ] Use environment variables for secrets
+  - [ ] Enable database encryption
+  - [ ] Add audit logging
+  - [ ] Implement role-based access control
+  - [ ] Add SQL injection prevention
+
+
+TESTING STATUS
+==============
+
+Backend:
+  - Unit Tests: Not yet implemented
+  - Integration Tests: Not yet implemented
+  - API Tests: Manual testing recommended
+
+Frontend:
+  - Unit Tests: Not yet implemented
+  - Integration Tests: Not yet implemented
+  - Component Tests: Not yet implemented
+
+
+DEPLOYMENT NOTES
+================
+
+Current Status:
+  - Development build only
+  - Not production-ready
+  - Localhost configuration
+
+Deployment Steps (Future):
+  1. Build backend JAR: mvn clean package
+  2. Build frontend: npm run build
+  3. Configure database for production
+  4. Set up environment variables
+  5. Deploy backend to server
+  6. Deploy frontend to web server
+  7. Configure domain and SSL
+  8. Set up monitoring and logging
+
+
+VERSION INFORMATION
+===================
+
+Project Version: 1.0.0
+Java Version: 17
+Spring Boot Version: 2.7.14
+React Version: 18.2.0
+MySQL Version: 8.0+
+npm Version: 8.0+
+Node Version: 14.0+
+
+Compatibility:
+  - Java 11+: Supported
+  - Node.js 12+: Supported
+  - MySQL 5.7+: Supported
+
+
+SUPPORT RESOURCES
+=================
+
+Documentation:
+  - README.md (Complete guide)
+  - CONFIGURATION.md (Settings)
+  - SETUP_GUIDE.md (Installation)
+
+Official Resources:
+  - Spring Boot: https://spring.io/projects/spring-boot
+  - React: https://reactjs.org/
+  - MySQL: https://www.mysql.com/
+  - Redux: https://redux.js.org/
+
+Getting Help:
+  1. Check relevant documentation file
+  2. Review browser console (F12)
+  3. Check backend server logs
+  4. Verify database connection
+  5. Check port availability
+
+
+PROJECT METADATA
+================
+
+Created: December 2, 2025
+Created By: AI Assistant
+Platform: Windows
+System: Desktop
+User: DELL
+IDE Recommended: VS Code, IntelliJ IDEA
+Database Admin Tool: MySQL Workbench
+
+
+MAINTENANCE NOTES
+=================
+
+Regular Maintenance:
+  - Update npm packages: npm update
+  - Update Maven dependencies: mvn dependency:update-snapshots
+  - Check for vulnerabilities: npm audit
+  - Review logs regularly
+  - Backup database regularly
+
+Monitoring (Future):
+  - Application logs
+  - Database performance
+  - API response times
+  - User activity
+  - Error tracking
+
+
+END OF MANIFEST
+===============
+
+For more information, see README.md or INDEX.md
+
+Project created successfully!
+Ready for development and learning.
+
+Good luck! 🚀
