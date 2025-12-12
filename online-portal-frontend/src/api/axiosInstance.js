@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8081/api',
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8081/api',
   // If you plan to use cookies (session auth), enable this:
   // withCredentials: true,
   timeout: 10000
